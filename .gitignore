@@ -3,8 +3,11 @@
 *.log
 .DS_Store
 /selftest-out
+temp_auto_push.bat
 /.claude/
 /design-review
 /after
 /ci-artifacts
 /_site
+.gitignore
+branch_structure.json

@@ -1063,7 +1063,7 @@ enum Scene {
     ScriptReading,
     /// The Health page with steps the phone last sent three days ago.
     HealthStale,
-    /// The same reading with Oyenza Studio Recorder installed: Record shows.
+    /// The same reading with Async Island Recorder installed: Record shows.
     ScriptRecorder,
     /// System page on a desktop, Power: its power supply reports over USB.
     SystemPower,
@@ -1108,7 +1108,7 @@ enum Scene {
     StocksSearch,
     /// Stocks in edit mode: remove buttons and handles.
     StocksEdit,
-    /// A recording with Oyenza Studio Recorder: the Record page while it
+    /// A recording with Async Island Recorder: the Record page while it
     /// records (`Page(Record)` shows its choices), then the closed island's
     /// recording pill, recording and paused.
     RecordLive,
@@ -1320,7 +1320,7 @@ const SCENES: [Scene; 128] = [
     Scene::StocksPicked,
     Scene::StocksSearch,
     Scene::StocksEdit,
-    // Oyenza Studio Recorder installed: the Record page's choices and the
+    // Async Island Recorder installed: the Record page's choices and the
     // recording, the closed island while it records and while paused, and
     // the Add-ons page with Screen recorder's row.
     Scene::Page(PageKind::Record),
@@ -1536,7 +1536,7 @@ impl Scene {
         }
     }
 
-    /// Oyenza Studio Recorder is installed (Record by the Script page's Paste,
+    /// Async Island Recorder is installed (Record by the Script page's Paste,
     /// the Record tab, Screen recorder's row).
     fn recorder(self) -> bool {
         matches!(
@@ -1645,7 +1645,7 @@ pub fn fetch_phone_page(url: &str) -> (bool, String) {
         Ok(out)
     };
     match fetch() {
-        Ok(resp) if resp.starts_with("HTTP/1.1 200") && resp.contains("<title>Oyenza Studio") && resp.trim_end().ends_with("</html>") => {
+        Ok(resp) if resp.starts_with("HTTP/1.1 200") && resp.contains("<title>Async Island") && resp.trim_end().ends_with("</html>") => {
             (true, format!("served the page at {addr} ({} bytes)", resp.len()))
         }
         Ok(resp) => (false, format!("unexpected answer from {addr}: {}", resp.lines().next().unwrap_or(""))),
@@ -2363,10 +2363,10 @@ impl SelfTest {
         // PONI_SELFTEST_ANALYZER: "required" (Windows CI) = Windows' own
         // analyzer must work and every line must read, kanji lines included;
         // "off" = read the song the way a PC without Windows' Japanese reading
-        // data does (Oyenza Studio's own dictionary), every line too; "kana" = the
+        // data does (Async Island's own dictionary), every line too; "kana" = the
         // way 0.1.11 and older read it there (kana lines only), for
         // before/after pictures. Without it, Wine has no analyzer, so its
-        // lines come from Oyenza Studio's own dictionary.
+        // lines come from Async Island's own dictionary.
         let analyzer = std::env::var("PONI_SELFTEST_ANALYZER").map(|v| v.trim().to_ascii_lowercase()).unwrap_or_default();
         let texts: Vec<&str> = parsed.lines.iter().map(|l| l.text.trim()).collect();
         let japanese = poni_core::romanize::song_script(&texts) == Some(poni_core::romanize::Script::Japanese);
@@ -3431,7 +3431,7 @@ impl SelfTest {
             let n = f.total();
             drop(f);
             if self.renderer != "software" {
-                self.checks.push(check("frame-count", n > 0, format!("{n} of Oyenza Studio's own frames counted from Windows' frame log")));
+                self.checks.push(check("frame-count", n > 0, format!("{n} of Async Island's own frames counted from Windows' frame log")));
             } else {
                 crate::pinfo!("selftest: frame count saw {n} frames (the software renderer presents none)");
             }

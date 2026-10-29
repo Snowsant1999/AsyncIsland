@@ -168,12 +168,12 @@ pub fn main_entry() -> i32 {
         std::env::set_var("PONI_HOME", &home);
     }
     crate::plog::init(paths::log_path());
-    pinfo!("Oyenza Studio {} starting on macOS (args: {:?})", env!("CARGO_PKG_VERSION"), &args[1..]);
+    pinfo!("Async Island {} starting on macOS (args: {:?})", env!("CARGO_PKG_VERSION"), &args[1..]);
     std::panic::set_hook(Box::new(|info| {
         perror!("panic: {info}");
     }));
     let Some(mtm) = MainThreadMarker::new() else {
-        eprintln!("Oyenza Studio must start on the main thread");
+        eprintln!("Async Island must start on the main thread");
         return 2;
     };
     let _lock = match single_instance() {
@@ -322,7 +322,7 @@ pub fn drain_events() {
     });
 }
 
-/// A message from Oyenza Studio Recorder through the island's message port
+/// A message from Async Island Recorder through the island's message port
 /// (`services::recorder::listen`), read while the recorder waits for the
 /// reply: true tells it the island shows the recording (or its Record page),
 /// so it keeps its own bar and controls hidden; false, that it should show
@@ -484,7 +484,7 @@ pub struct App {
     smoke_post: Option<(bool, String)>,
     /// The island floated on the last frame (Pill letting go of the notch).
     was_floating: bool,
-    /// The port Oyenza Studio Recorder writes to (`services::recorder`).
+    /// The port Async Island Recorder writes to (`services::recorder`).
     rec_port: Option<services::recorder::Port>,
     /// When the island next asks whether the recorder still runs (mono seconds).
     rec_alive_at: f64,
@@ -622,7 +622,7 @@ impl App {
         self.sync_addons();
         self.schedule_update();
         self.fetch_setup();
-        // Oyenza Studio Recorder installed: the Record tab can show (one
+        // Async Island Recorder installed: the Record tab can show (one
         // Launch Services question); its port is open either way, for the
         // recorder installed later.
         if self.smoke.is_none() {
@@ -649,11 +649,11 @@ impl App {
         }
         if self.first_run && self.smoke.is_none() {
             let place = if self.screen.notch.is_some() { "Point at the notch to open it" } else { "Point at the island to open it" };
-            self.st.notify(Icon::CheckCircle, self.st.accent, "Oyenza Studio is on", place, 6.0, None);
+            self.st.notify(Icon::CheckCircle, self.st.accent, "Async Island is on", place, 6.0, None);
         }
         if self.smoke.is_none() {
             if let Some(dir) = services::trash_app_from_before_rename() {
-                self.st.notify(Icon::Trash, self.st.accent, "Oyen Poni is now Oyenza Studio", format!("The old copy in {dir} is in the Trash"), 8.0, None);
+                self.st.notify(Icon::Trash, self.st.accent, "Oyen Poni is now Async Island", format!("The old copy in {dir} is in the Trash"), 8.0, None);
             }
         }
         if self.smoke.is_some() {
@@ -667,7 +667,7 @@ impl App {
     fn quit(&mut self, code: i32) {
         self.save_now();
         self.save_settings();
-        pinfo!("Oyenza Studio exiting with code {code}");
+        pinfo!("Async Island exiting with code {code}");
         std::process::exit(code);
     }
 
@@ -1058,7 +1058,7 @@ impl App {
                 pinfo!("start at login: {now:?}");
                 if now == Login::NeedsApproval {
                     services::login::open_settings();
-                    self.st.notify(Icon::Sliders, palette::ORANGE, "Allow Oyenza Studio to start at login", "Turn it on in Login Items", 8.0, None);
+                    self.st.notify(Icon::Sliders, palette::ORANGE, "Allow Async Island to start at login", "Turn it on in Login Items", 8.0, None);
                 }
             }
         }
@@ -1255,7 +1255,7 @@ impl App {
             if let Some(dmg) = self.updater.as_ref().and_then(|u| u.downloaded(&self.st)) {
                 services::open(&dmg.to_string_lossy());
                 self.collapse();
-                self.st.notify(Icon::Download, self.st.accent, "Install it by hand this time", "Drag Oyenza Studio to Applications in the window that opened", 10.0, None);
+                self.st.notify(Icon::Download, self.st.accent, "Install it by hand this time", "Drag Async Island to Applications in the window that opened", 10.0, None);
                 return;
             }
         }
@@ -2173,7 +2173,7 @@ impl App {
         self.request_frame();
     }
 
-    /// Oyenza Studio Recorder's word on its recording, or "show yourself"
+    /// Async Island Recorder's word on its recording, or "show yourself"
     /// (`recorder_message`). True when the island takes it: it shows the
     /// recording, or opened on its Record page.
     fn on_recorder_message(&mut self, m: poni_core::recorder::Message) -> bool {
@@ -3479,7 +3479,7 @@ impl App {
                 self.st.pomodoro.start(self.st.now);
             }
             "notice" => {
-                self.st.notify(Icon::CheckCircle, self.st.accent, "Oyenza Studio is on", "Point at the island to open it", 30.0, None);
+                self.st.notify(Icon::CheckCircle, self.st.accent, "Async Island is on", "Point at the island to open it", 30.0, None);
             }
             "volume-hud" => {
                 self.st.notice = None;
@@ -3799,7 +3799,7 @@ impl App {
                 self.st.page = PageKind::Today;
                 self.expand();
             }
-            // Oyenza Studio Recorder's word through the island's message port,
+            // Async Island Recorder's word through the island's message port,
             // sent from another process as the recorder sends it
             // (tools/mac-smoke.sh), around a notch: the recording rests in its
             // ears; then its end.
@@ -4287,7 +4287,7 @@ impl App {
 /// The keychain items tools/mac-smoke.sh adds for the AI tab's reader: their
 /// service, and the passwords of the accounts "plain" and "accent" (an accent
 /// and a line break, which `security` prints as hex). "absent" is never added.
-const SMOKE_KEYCHAIN: (&str, &str, &str) = ("Oyenza Studio smoke", "{\"claudeAiOauth\":{\"accessToken\":\"test-token\"}}", "caf\u{e9}\nnext");
+const SMOKE_KEYCHAIN: (&str, &str, &str) = ("Async Island smoke", "{\"claudeAiOauth\":{\"accessToken\":\"test-token\"}}", "caf\u{e9}\nnext");
 
 /// The smoke test of the AI tab's keychain reader (`services::keychain`) on
 /// the items above, with the tab closed, open, then closed with the notices

@@ -80,7 +80,7 @@ pub enum PageKind {
     System,
     /// The teleprompter: a script read under the webcam.
     Script,
-    /// Screen recording with Oyenza Studio Recorder, while its add-on is on
+    /// Screen recording with Async Island Recorder, while its add-on is on
     /// ([`tabs`]): what to record, then the recording under way.
     Record,
     /// Prayer times, while that add-on is on ([`tabs`]).

@@ -8,7 +8,7 @@
 //!
 //! 1. [`Provider::wants`]: which files on this computer to read (the
 //!    service's own sign-in or logs), a Mac keychain item, or a key the
-//!    person typed into Oyenza Studio. The app reads them ([`Got`]).
+//!    person typed into Async Island. The app reads them ([`Got`]).
 //! 2. [`Provider::next`], called with what was read and the answers so far:
 //!    either a request to make ([`Step::Fetch`], at most [`MAX_FETCHES`] a
 //!    refresh) or the result ([`Step::Done`]): a [`Snapshot`] or why there
@@ -27,7 +27,7 @@
 //! - A sign-in read here goes only to its own service's server (the token
 //!   from Codex's file goes to chatgpt.com, never anywhere else), and never
 //!   into the log, an error message or a snapshot.
-//! - Ask as Oyenza Studio: never set a `User-Agent` that pretends to be
+//! - Ask as Async Island: never set a `User-Agent` that pretends to be
 //!   another app.
 //! - Unknown is not zero: a number the answer doesn't carry stays `None`.
 
@@ -235,7 +235,7 @@ pub enum Want {
     /// A macOS keychain password (generic password, by service and account).
     /// Windows answers [`Got::Missing`].
     Keychain { service: String, account: Option<String> },
-    /// A key the person typed into Oyenza Studio for this service, kept
+    /// A key the person typed into Async Island for this service, kept
     /// sealed by the app (DPAPI / keychain), by name.
     Secret(&'static str),
     /// `len` bytes of a file from `offset` (fewer at its end), for files too
@@ -457,7 +457,7 @@ pub trait Provider: Sync {
         120
     }
 
-    /// The service needs a key typed into Oyenza Studio ([`Want::Secret`]);
+    /// The service needs a key typed into Async Island ([`Want::Secret`]);
     /// the tab then offers a field for it.
     fn takes_key(&self) -> Option<KeyAsk> {
         None
@@ -683,7 +683,7 @@ pub enum Trouble {
     /// The sign-in here has expired; the service's own app renews it the
     /// next time it runs (we never do).
     Expired,
-    /// It needs a key typed into Oyenza Studio.
+    /// It needs a key typed into Async Island.
     NeedsKey,
     /// The service refused the sign-in or key (401/403).
     Refused,

@@ -163,7 +163,7 @@ enum Scene {
     /// next start.
     UpdateSheet,
     UpdateReady,
-    /// Oyenza Studio Recorder installed and heard from: the Record page's
+    /// Async Island Recorder installed and heard from: the Record page's
     /// choices, the page while it records (0:42), the closed island's
     /// recording (12:34; around a notch its dot and time sit in the ears),
     /// paused, and the Add-ons tab with Screen recorder's row.

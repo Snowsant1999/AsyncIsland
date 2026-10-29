@@ -118,7 +118,7 @@ pub fn health_url() -> String {
     format!("{API}/island/health")
 }
 
-/// Whether the signed-in account has Oyenza Studio Pro: `{"pro": bool}`. The
+/// Whether the signed-in account has Async Island Pro: `{"pro": bool}`. The
 /// server decides (who it is is never in the island, which only knows a
 /// masked account).
 pub fn pro_url() -> String {

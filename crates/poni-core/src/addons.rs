@@ -44,7 +44,7 @@ pub struct Addon {
     /// The release that holds this version of the files.
     pub tag: &'static str,
     pub files: &'static [AddonFile],
-    /// Part of Oyenza Studio Pro: it works only for an Oyenza account the
+    /// Part of Async Island Pro: it works only for an Oyenza account the
     /// server says has Pro (`GET /island/pro`; `AppState::pro`).
     pub pro: bool,
 }
@@ -89,7 +89,7 @@ pub const PRAYER_TIMES: Addon = Addon {
 /// The Japanese readings add-on's dictionary file (`romanize::JaDict`).
 pub const JA_READINGS_FILE: &str = "ja-readings.dic.zst";
 
-/// Japanese readings: Oyenza Studio's own reading dictionary, for romaji under
+/// Japanese readings: Async Island's own reading dictionary, for romaji under
 /// kanji on Macs and on PCs where Windows has no Japanese reading data (most
 /// PCs outside Japan). Only people who play Japanese songs need it: the first
 /// song whose kanji go unread switches it on ([`ja_switches_on`], once;
@@ -189,7 +189,7 @@ pub const NOTIFICATIONS: Addon = Addon {
 };
 
 /// Screen recorder: the Record page and the recording pill, the face of
-/// Oyenza Studio Recorder (its own install, about 120 MB). Its code is in the
+/// Async Island Recorder (its own install, about 120 MB). Its code is in the
 /// island, so there is nothing to download. It shows on the Add-ons page once
 /// the recorder is installed, and is on from then until switched off
 /// (`Settings::recorder_on`). Off, there is no Record tab, and the recorder
@@ -197,7 +197,7 @@ pub const NOTIFICATIONS: Addon = Addon {
 pub const SCREEN_RECORDER: Addon = Addon {
     id: "recorder",
     title: "Screen recorder",
-    blurb: "Record your screen from the island, with Oyenza Studio Recorder.",
+    blurb: "Record your screen from the island, with Async Island Recorder.",
     mac_blurb: None,
     tag: "",
     files: &[],

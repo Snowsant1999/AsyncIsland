@@ -53,7 +53,7 @@ pub fn apple_music_web_token_path() -> PathBuf {
     cache_dir().join("apple-music-web.json")
 }
 
-/// Where files sent from a phone land: `Downloads\Oyenza Studio` (wherever the
+/// Where files sent from a phone land: `Downloads\Async Island` (wherever the
 /// user moved Downloads to), or `Downloads\Oyen Poni` where an install from
 /// before the rename made it: Shelf items link to the files in it. Under
 /// `PONI_HOME` for the self-test.
@@ -63,7 +63,14 @@ pub fn phone_inbox_dir() -> PathBuf {
     }
     let downloads = downloads_dir().unwrap_or_else(|| env_dir("USERPROFILE").join("Downloads"));
     let before_rename = downloads.join("Oyen Poni");
-    if before_rename.is_dir() { before_rename } else { downloads.join("Oyenza Studio") }
+    let before_async = downloads.join("Oyenza Studio");
+    if before_async.is_dir() {
+        before_async
+    } else if before_rename.is_dir() {
+        before_rename
+    } else {
+        downloads.join("Async Island")
+    }
 }
 
 fn downloads_dir() -> Option<PathBuf> {
@@ -108,14 +115,19 @@ pub fn notes_audio_dir() -> PathBuf {
     cache_dir().join("notes")
 }
 
-/// Where meeting notes are saved, as Markdown: `Documents\Oyenza Studio\Notes`
+/// Where meeting notes are saved, as Markdown: `Documents\Async Island\Notes`
 /// (wherever the user moved Documents to). Under `PONI_HOME` for the self-test.
 pub fn notes_dir() -> PathBuf {
     if let Some(h) = home_override() {
         return h.join("notes-saved");
     }
     let docs = known_folder(&windows::Win32::UI::Shell::FOLDERID_Documents).unwrap_or_else(|| env_dir("USERPROFILE").join("Documents"));
-    docs.join("Oyenza Studio").join("Notes")
+    let before_async = docs.join("Oyenza Studio").join("Notes");
+    if before_async.is_dir() {
+        before_async
+    } else {
+        docs.join("Async Island").join("Notes")
+    }
 }
 
 /// Paired phones (their pairing secrets and names), sealed with DPAPI.

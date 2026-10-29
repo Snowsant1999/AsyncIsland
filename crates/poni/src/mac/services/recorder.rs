@@ -1,4 +1,4 @@
-//! Oyenza Studio Recorder on the Mac: the separate recorder app built from
+//! Async Island Recorder on the Mac: the separate recorder app built from
 //! Cap. The island starts, pauses and stops its recordings through the
 //! recorder's own links (`poni_core::recorder`), and the recorder tells the
 //! island how they go through the island's message port ([`listen`]): the

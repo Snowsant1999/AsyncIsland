@@ -49,7 +49,7 @@ pub struct Store {
     /// The Stocks add-on's list: the stocks after the IHSG, the one shown,
     /// the change pills' choice and the chart's range.
     pub stocks: crate::stocks::Watchlist,
-    /// Oyenza Studio Recorder has written to the island (`recorder::Message`)
+    /// Async Island Recorder has written to the island (`recorder::Message`)
     /// at least once, so it reads the Record page's links: Screen recorder
     /// shows from then on. 1.0.0 never writes, and its Record would do nothing.
     pub recorder_island: bool,

@@ -1,4 +1,4 @@
-//! Oyenza Studio Recorder: the separate recorder app built from Cap. The
+//! Async Island Recorder: the separate recorder app built from Cap. The
 //! island starts, pauses and stops its recordings through the recorder's own
 //! links (`poni_core::recorder`), and the recorder tells the island how they
 //! go with `WM_COPYDATA` (read in `app.rs`). Nothing here runs at rest:

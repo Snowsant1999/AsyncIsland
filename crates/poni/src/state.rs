@@ -179,7 +179,7 @@ pub enum NotifyAccess {
     /// Asked, and Windows came back without an answer (the question was
     /// closed, or never showed): ask again, or turn it on in Windows' settings.
     Unanswered,
-    /// Turned off for Oyenza Studio in Windows' settings.
+    /// Turned off for Async Island in Windows' settings.
     Denied,
     /// Windows lets it read them: new ones show on the island.
     Allowed,
@@ -374,7 +374,7 @@ pub struct PageUiState {
     pub notes_kept: bool,
 }
 
-/// Whether Windows lets Oyenza Studio read a game's frames. Its event tracing
+/// Whether Windows lets Async Island read a game's frames. Its event tracing
 /// is open to admins and to the Performance Log Users group; the one-time
 /// OK adds the account to that group, which counts from the next sign-in.
 #[derive(Clone, Debug, Default, PartialEq)]
@@ -500,7 +500,7 @@ pub enum Locate {
     /// Away from Kemenag's places, and the cities around couldn't be looked
     /// up (offline): the place stays as it was.
     Offline,
-    /// Windows' location is off, or not allowed for Oyenza Studio.
+    /// Windows' location is off, or not allowed for Async Island.
     Denied,
     /// Windows couldn't tell where the PC is.
     Unknown,
@@ -611,7 +611,7 @@ impl PrayerState {
     }
 }
 
-/// What Oyenza Studio Recorder last said about its recording
+/// What Async Island Recorder last said about its recording
 /// (`poni_core::recorder::Message::State`).
 #[derive(Clone, Debug, Default)]
 pub struct RecView {
@@ -816,7 +816,7 @@ pub struct AppState {
     /// Whether Windows leaves the island out of screen capture while the
     /// Script page shows (None = not asked yet, or not on Windows).
     pub script_hidden: Option<bool>,
-    /// Oyenza Studio Recorder is installed: the Script page shows Record, and
+    /// Async Island Recorder is installed: the Script page shows Record, and
     /// the Record tab can show (`record_on`). Asked at start, as the island
     /// opens and when the recorder writes, never at rest.
     pub recorder: bool,

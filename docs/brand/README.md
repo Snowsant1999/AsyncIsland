@@ -1,6 +1,6 @@
-# Oyenza Studio brand files
+# Async Island brand files
 
-Oyenza Studio belongs to the Oyen family. Oyen is the orange cat of the Oyenza logo.
+Async Island belongs to the Oyen family. Oyen is the orange cat of the Oyenza logo.
 
 | File | What |
 |---|---|

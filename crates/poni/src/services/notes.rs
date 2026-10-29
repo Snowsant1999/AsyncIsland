@@ -16,7 +16,7 @@
 //! second thread, `poni-notes-send`, exists only while a meeting is handed
 //! over: it sends the parts, says it's over, asks every few seconds until
 //! the notes are written (`poni_core::notes::POLL_S`), saves them as
-//! Markdown in `Documents\Oyenza Studio\Notes` and deletes the audio. The
+//! Markdown in `Documents\Async Island\Notes` and deletes the audio. The
 //! calls carry the PC's Oyenza key, read from its sealed file on that thread
 //! only, never the UI's or the log.
 

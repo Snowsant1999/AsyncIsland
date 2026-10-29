@@ -123,7 +123,7 @@ pub struct Settings {
     pub game_peek: bool,
     /// The AI tab's choices (its readers are the `studio-usage` crate).
     pub usage: UsageSettings,
-    /// The Record page's choices (Oyenza Studio Recorder).
+    /// The Record page's choices (Async Island Recorder).
     pub record: RecordSettings,
     /// The Notifications add-on's choices: which apps the island shows, and
     /// whether who it's from and the message show at once.
@@ -296,7 +296,7 @@ impl Settings {
         !self.addons.contains_key(id)
     }
 
-    /// Screen recorder: on once Oyenza Studio Recorder is `installed`, unless
+    /// Screen recorder: on once Async Island Recorder is `installed`, unless
     /// the person switched it off (installing the recorder is the switch).
     pub fn recorder_on(&self, installed: bool) -> bool {
         installed && self.addons.get(crate::addons::SCREEN_RECORDER.id).copied().unwrap_or(true)
