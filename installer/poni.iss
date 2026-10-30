@@ -1,4 +1,4 @@
-; Oyenza Studio installer (Inno Setup 6.5.2+, for the PNG wizard images).
+; Async Island installer (Inno Setup 6.5.2+, for the PNG wizard images).
 ;
 ; Releases ship installer/poni.nsi (NSIS), which 0.1.x installs came from; CI builds this one too as a check.
 ;
@@ -16,7 +16,7 @@
 #ifndef ExeSource
   #define ExeSource "..\target\release\poni.exe"
 #endif
-#define AppName "Oyenza Studio"
+#define AppName "Async Island"
 ; Folder, data and Run value names stay "Poni" (the app and 0.1.x installs use them).
 #define AppDir "Poni"
 #define AppPublisher "Jatevo Labs"
@@ -45,7 +45,7 @@ ArchitecturesAllowed=x64compatible
 ArchitecturesInstallIn64BitMode=x64compatible
 MinVersion=10.0
 OutputDir=..\dist
-OutputBaseFilename=Oyenza-Studio-Setup-{#AppVersion}
+OutputBaseFilename=Async-Island-Setup-{#AppVersion}
 SetupIconFile=..\crates\poni\res\poni.ico
 UninstallDisplayIcon={app}\{#AppExe}
 UninstallDisplayName={#AppName}
@@ -71,7 +71,7 @@ Source: "{#ExeSource}"; DestDir: "{app}"; Flags: ignoreversion
 Source: "..\THIRD-PARTY-NOTICES.txt"; DestDir: "{app}"; Flags: ignoreversion
 
 [InstallDelete]
-; The shortcut the 0.1.x versions from 0.1.2 on made, before the app was renamed Oyenza Studio.
+; The shortcut the 0.1.x versions from 0.1.2 on made, before the app was renamed Async Island.
 Type: files; Name: "{autoprograms}\Oyen Poni.lnk"
 
 [Icons]

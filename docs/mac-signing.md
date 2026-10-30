@@ -1,6 +1,6 @@
 # Signing the Mac app
 
-Without a Developer ID signature, macOS says "Apple could not verify "Oyenza Studio" is free of malware" and sends people to System Settings > Privacy & Security > Open Anyway. A DMG signed with a Developer ID, checked by Apple (notarized) and stapled opens with one ordinary question, "downloaded from the Internet... Open".
+Without a Developer ID signature, macOS says "Apple could not verify "Async Island" is free of malware" and sends people to System Settings > Privacy & Security > Open Anyway. A DMG signed with a Developer ID, checked by Apple (notarized) and stapled opens with one ordinary question, "downloaded from the Internet... Open".
 
 The `mac` workflow does this by itself on every release tag once five secrets exist in this repository's `release` environment. Until then nothing changes: releases keep the ad-hoc signed test DMG. Only the Apple Developer account's Account Holder can make the certificate. Never paste any of these values into a chat, an issue or a commit.
 
@@ -15,7 +15,7 @@ What the workflow does, in `.github/workflows/mac.yml` and `tools/sign_mac_dmg.s
 
 1. Open **Keychain Access** (Applications > Utilities).
 2. In the menu bar: **Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority…**
-3. User Email Address: your Apple Account's email. Common Name: `Oyenza Studio Developer ID`. Leave CA Email empty. Choose **Saved to disk**, click **Continue** and save `CertificateSigningRequest.certSigningRequest`. Keychain Access makes the private key now, on this Mac.
+3. User Email Address: your Apple Account's email. Common Name: `Async Island Developer ID`. Leave CA Email empty. Choose **Saved to disk**, click **Continue** and save `CertificateSigningRequest.certSigningRequest`. Keychain Access makes the private key now, on this Mac.
 
 **The certificate**
 
@@ -39,7 +39,7 @@ Developer ID certificates made since 1 October 2026 last one year. Put a reminde
 notarytool signs in to Apple with this key, so no password or two-factor code sits in CI.
 
 1. Open https://appstoreconnect.apple.com > **Users and Access > Integrations > App Store Connect API**, tab **Team Keys**. A Team key is needed: Apple's notary service doesn't take Individual keys.
-2. Click **+** (Generate API Key). Name: `Oyenza Studio notarization`. Access: **Developer**. Click **Generate**.
+2. Click **+** (Generate API Key). Name: `Async Island notarization`. Access: **Developer**. Click **Generate**.
 3. Click **Download** next to the new key. You get `AuthKey_XXXXXXXXXX.p8`, and Apple offers the download only once.
 4. Note the **Key ID** (in the list) and the **Issuer ID** (above the list).
 
@@ -47,7 +47,7 @@ Make a new key for this rather than reusing one that can manage the iPhone app: 
 
 ## 3. The secrets, in the `release` environment (about 5 minutes)
 
-1. Open https://github.com/lucacadalora/oyenza-studio (this repository; GitHub forwards the old lucacadalora/poni address) > **Settings > Environments > New environment**. Name it `release` and click **Configure environment**.
+1. Open https://github.com/Snowsant1999/AsyncIsland (this repository; GitHub forwards the old lucacadalora/poni address) > **Settings > Environments > New environment**. Name it `release` and click **Configure environment**.
 2. **Deployment branches and tags:** choose **Selected branches and tags**. Add a tag rule `v*`, and a branch rule `main` for the test in step 4. Other branches and pull requests then can't reach these secrets.
 3. **Required reviewers** (optional): add yourself if every signed release should wait for your click on the run. Releases often come several times a day, so leaving it off is reasonable: only you, or a session you told to tag, push tags.
 4. Under **Environment secrets**, click **Add secret** five times:

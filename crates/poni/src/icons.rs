@@ -86,7 +86,7 @@ pub enum Icon {
     Stop,
     /// A new version: an arrow down into a tray.
     Download,
-    /// Record (Oyenza Studio Recorder): a dot that fits inside `Circle`.
+    /// Record (Async Island Recorder): a dot that fits inside `Circle`.
     Record,
     /// The Stocks tab: a line climbing to the right, its arrowhead at the end.
     Stocks,

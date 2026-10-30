@@ -1,6 +1,6 @@
 # AI usage
 
-The **AI** tab shows how much is left of the AI coding plans on your computer, and your Oyenza Inference balance once you connect it. This page says, for each service, what Oyenza Studio reads on your computer, which server it asks, how often, what the card shows, and whether it needs a key you type. [PRIVACY.md](../PRIVACY.md) has the short version.
+The **AI** tab shows how much is left of the AI coding plans on your computer, and your Oyenza Inference balance once you connect it. This page says, for each service, what Async Island reads on your computer, which server it asks, how often, what the card shows, and whether it needs a key you type. [PRIVACY.md](../PRIVACY.md) has the short version.
 
 ## When it reads
 
@@ -15,9 +15,9 @@ The **AI** tab shows how much is left of the AI coding plans on your computer, a
 
 - **Read only.** It never writes another app's files and never renews another app's sign-in: a renewal can sign you out of that app. When a sign-in has run out, the card keeps the last numbers it had and asks you to open that app once.
 - **A sign-in goes only to its own service's server.** Never to Oyenza or anyone else, and never into the log, an error message or the numbers kept for the card.
-- **It asks as Oyenza Studio.** Every request carries the User-Agent `OyenzaStudio/<version> (+https://github.com/lucacadalora/oyenza-studio)`, never one that pretends to be the service's own app. A service that answers only its own app shows as refused; Oyenza Studio doesn't work around it.
+- **It asks as Async Island.** Every request carries the User-Agent `AsyncIsland/<version> (+https://github.com/Snowsant1999/AsyncIsland)`, never one that pretends to be the service's own app. A service that answers only its own app shows as refused; Async Island doesn't work around it.
 - **Unknown is not zero.** A number the service doesn't give stays off the card.
-- **Nothing about your usage goes to Oyenza.** The numbers come from each service to your computer and stay in Oyenza Studio's memory.
+- **Nothing about your usage goes to Oyenza.** The numbers come from each service to your computer and stay in Async Island's memory.
 
 ## The services
 
@@ -76,7 +76,7 @@ With the tab closed and notices on, every server is asked at most every 10 minut
 
 ### Cursor
 
-- **Reads:** Cursor's sign-in from its state database, `state.vscdb`, in `%APPDATA%\Cursor\User\globalStorage\` on Windows and `~/Library/Application Support/Cursor/User/globalStorage/` on a Mac (under `VSCODE_APPDATA` if you set it): the access token, the cached email and the plan. That file also keeps your Cursor chats and can grow to many gigabytes, so Oyenza Studio reads only the few small pieces of it (about ten, of 4 KB each) that lead to those entries, never the whole file or the chats, and without locking or writing it, so Cursor carries on undisturbed.
+- **Reads:** Cursor's sign-in from its state database, `state.vscdb`, in `%APPDATA%\Cursor\User\globalStorage\` on Windows and `~/Library/Application Support/Cursor/User/globalStorage/` on a Mac (under `VSCODE_APPDATA` if you set it): the access token, the cached email and the plan. That file also keeps your Cursor chats and can grow to many gigabytes, so Async Island reads only the few small pieces of it (about ten, of 4 KB each) that lead to those entries, never the whole file or the chats, and without locking or writing it, so Cursor carries on undisturbed.
 - **Asks:** `cursor.com`, with the sign-in as the cookie Cursor's own site uses: `GET /api/usage-summary`, then `GET /api/usage?user=<your id>` for the older plans counted in requests. Two requests a refresh.
 - **How often:** at most every 5 minutes while the tab is open.
 - **The card:** the plan (Free, Hobby, Pro, Pro+, Ultra, Team, Business, Enterprise and the rest), the account's email (masked), **Monthly** (with **Monthly · Auto** and **Monthly · API** where Cursor splits it) with when the billing month resets, or **Requests** used of how many on the older plans, and extra spend this month against its cap.
@@ -112,7 +112,7 @@ With the tab closed and notices on, every server is asked at most every 10 minut
 ### MiniMax
 
 - **Reads:** nothing on disk: a key you typed, else the `MINIMAX_CODING_API_KEY` variable, else `MINIMAX_API_KEY`. Only a plan key can read the plan, so a standard API key (`sk-api-…`) is never sent: in a variable it is skipped, and typed in it shows as refused.
-- **Asks:** `api.minimax.io`, with the key: `GET /v1/token_plan/remains`, and for an older Coding Plan `GET /v1/api/openplatform/coding_plan/remains`. A key that api.minimax.io refuses is asked about the same way at `api.minimaxi.com`, MiniMax's server in mainland China, on each refresh while it is refused. Usually one request a refresh, at most four. The requests name Oyenza Studio (`MM-API-Source: Oyenza Studio`).
+- **Asks:** `api.minimax.io`, with the key: `GET /v1/token_plan/remains`, and for an older Coding Plan `GET /v1/api/openplatform/coding_plan/remains`. A key that api.minimax.io refuses is asked about the same way at `api.minimaxi.com`, MiniMax's server in mainland China, on each refresh while it is refused. Usually one request a refresh, at most four. The requests name Async Island (`MM-API-Source: Async Island`).
 - **How often:** at most every 5 minutes while the tab is open.
 - **The card:** the plan (Token Plan, Plus and so on, when MiniMax names it), **5-hour** and **Weekly** for text, and a bar for each other allowance your plan has (**Daily · Video**, **Daily · Speech**, **Daily · Images**, **Daily · Music**), counted where the plan counts.
 - **Typed key:** needed, unless one of the variables is set. Make one on [MiniMax's Coding Plan page](https://platform.minimax.io/user-center/payment/coding-plan).
@@ -133,7 +133,7 @@ With the tab closed and notices on, every server is asked at most every 10 minut
 - **The card:** your plan (Trial or Pay as you go), the account's email (masked), your balance, what you spent today and over the last 7 and 30 days, and the last 14 days as a small bar line.
 - **Typed key:** none: **Connect** instead.
 
-**Connecting.** **Connect** on the card shows 8 letters, such as `KPJX-TMNQ`, and **Open** takes you to inference.oyenza.com's page for them. Signed in there, check the computer's name and the letters, and choose **Approve**: the card fills in a few seconds later. The code works once, for 10 minutes. Approve only the letters your own Oyenza Studio shows: whoever made a code you approve can read your balance and spend until you revoke it. Connecting tells inference.oyenza.com this computer's name, whether it's Windows or a Mac, and Oyenza Studio's version.
+**Connecting.** **Connect** on the card shows 8 letters, such as `KPJX-TMNQ`, and **Open** takes you to inference.oyenza.com's page for them. Signed in there, check the computer's name and the letters, and choose **Approve**: the card fills in a few seconds later. The code works once, for 10 minutes. Approve only the letters your own Async Island shows: whoever made a code you approve can read your balance and spend until you revoke it. Connecting tells inference.oyenza.com this computer's name, whether it's Windows or a Mac, and Async Island's version.
 
 **What the key can do.** It reads your account's summary and nothing else: balance, plan, spend and number of requests today and over the last 7 and 30 days, each of the last 14 days, your top three models by spend, and the account's email, masked. It can't call the models, spend credit, or see your prompts, your API keys, your payments or your account's settings. inference.oyenza.com keeps only a fingerprint of it (SHA-256), never the key itself; each computer has its own, and an account has at most 10 (connecting an 11th disconnects the oldest). Nothing about your other AI services goes to inference.oyenza.com.
 
@@ -141,9 +141,9 @@ With the tab closed and notices on, every server is asked at most every 10 minut
 
 ## Keys and variables
 
-- **Typed keys** go in the AI tab: open **Services**, choose **Add key** beside the service, paste the key and **Save**. Oyenza Studio keeps each one sealed with Windows' own protection (DPAPI), so only your Windows account on this PC can read it, in `%LOCALAPPDATA%\Poni\`; on a Mac, in a file only your Mac account can read, in `~/Library/Application Support/Poni/`. Never in your settings or the log. Uninstalling on Windows deletes them.
+- **Typed keys** go in the AI tab: open **Services**, choose **Add key** beside the service, paste the key and **Save**. Async Island keeps each one sealed with Windows' own protection (DPAPI), so only your Windows account on this PC can read it, in `%LOCALAPPDATA%\Poni\`; on a Mac, in a file only your Mac account can read, in `~/Library/Application Support/Poni/`. Never in your settings or the log. Uninstalling on Windows deletes them.
 - **A key with a space or line break inside it** (a paste that caught one) is refused before it is sent; spaces around it are trimmed.
-- **Variables** such as `OPENROUTER_API_KEY` or `CODEX_HOME` are the ones Oyenza Studio started with, so restart it after setting one. On a Mac, apps opened from the Dock or Finder don't see variables set in a shell profile such as `~/.zshrc`, so type the key in the AI tab there instead.
+- **Variables** such as `OPENROUTER_API_KEY` or `CODEX_HOME` are the ones Async Island started with, so restart it after setting one. On a Mac, apps opened from the Dock or Finder don't see variables set in a shell profile such as `~/.zshrc`, so type the key in the AI tab there instead.
 - **On a Mac, a sign-in kept in the keychain** is read with macOS's own `security` tool, only while the AI tab is open, and at most once each time you open it (the notices use that copy). The item normally trusts that tool, so macOS doesn't ask. If it does, its prompt names "security": say no to keep the item closed, and the card says so until you press **Refresh**, which asks once more.
 - **What you chose** (which services are hidden or added, the notices switch) is kept in your settings, `settings.json`, under `usage`.
 
@@ -153,7 +153,7 @@ With the tab closed and notices on, every server is asked at most every 10 minut
 - **Remove** a key you typed and its sealed copy is deleted. To make the key useless everywhere, delete it on the service's own site too.
 - **Disconnect** Oyenza Inference, or revoke the computer in the dashboard.
 - **Switch off Tell me before I run out** and nothing is read while the tab is closed.
-- **Signing out** of a service in its own app works too: Oyenza Studio then has no sign-in to send.
+- **Signing out** of a service in its own app works too: Async Island then has no sign-in to send.
 
 ## Where this comes from
 

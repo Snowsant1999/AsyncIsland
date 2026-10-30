@@ -1,4 +1,4 @@
-//! Oyenza Studio Recorder, the screen recorder built from Cap, ships as its
+//! Async Island Recorder, the screen recorder built from Cap, ships as its
 //! own app (its recording engine is about 120 MB, the island 2.5 MB). The
 //! island is its face: the Record page starts recordings through the
 //! recorder's own `oyenza-recorder:` links, built here the same way on

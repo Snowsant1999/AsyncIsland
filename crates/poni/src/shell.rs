@@ -11,7 +11,7 @@
 //! `javascript:`, `shell:`, relative names that would be searched on `PATH`)
 //! is logged and refused. Fixed exceptions: Settings > Apps > Startup
 //! ([`open_startup_settings`]) and Settings > Privacy > Notifications
-//! ([`open_notification_settings`]), constant URIs; Oyenza Studio Recorder's
+//! ([`open_notification_settings`]), constant URIs; Async Island Recorder's
 //! own action links ([`open_recorder_link`]): its fixed scheme and one
 //! percent-encoded value, as `poni_core::recorder` builds them; and an app
 //! by its AppUserModelID in the Apps folder ([`open_app`]), the characters
@@ -57,7 +57,7 @@ pub fn open(target: &str) {
     });
 }
 
-/// Open one of Oyenza Studio Recorder's action links (asynchronously). Only
+/// Open one of Async Island Recorder's action links (asynchronously). Only
 /// the shape `poni_core::recorder` builds reaches the shell.
 pub fn open_recorder_link(link: &str) {
     if !poni_core::recorder::is_action_link(link) {

@@ -1,15 +1,15 @@
-<p align="center"><img src="docs/brand/oyen-poni-logo.svg" width="96" alt="Oyenza Studio logo: an orange tile with the black island at the top playing music, and a white Oyen below"></p>
+<p align="center"><img src="docs/brand/oyen-poni-logo.svg" width="96" alt="Async Island logo: an orange tile with the black island at the top playing music, and a white Oyen below"></p>
 
-<h1 align="center">Oyenza Studio</h1>
+<h1 align="center">Async Island</h1>
 
 <h3 align="center">A living notch for Windows and Mac</h3>
 
 <p align="center">Like the Dynamic Island on a phone, for your computer. A small island hangs from the top of your screen, shows what's playing, counting down and arriving, and opens into quick pages when you point at it.</p>
 
 <p align="center">
-  <a href="https://github.com/lucacadalora/oyenza-studio/releases/latest/download/Oyenza-Studio-Setup.exe"><img src="https://img.shields.io/badge/Download_for_Windows-0078D4?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZD0iTTIgMmg5LjJ2OS4ySDJ6bTEwLjggMEgyMnY5LjJoLTkuMnpNMiAxMi44aDkuMlYyMkgyem0xMC44IDBIMjJWMjJoLTkuMnoiLz48L3N2Zz4=" height="34" alt="Download for Windows"></a>
+  <a href="https://github.com/Snowsant1999/AsyncIsland/releases/latest/download/Async-Island-Setup.exe"><img src="https://img.shields.io/badge/Download_for_Windows-0078D4?style=for-the-badge&logo=data:image/svg%2Bxml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZiI%2BPHBhdGggZD0iTTIgMmg5LjJ2OS4ySDJ6bTEwLjggMEgyMnY5LjJoLTkuMnpNMiAxMi44aDkuMlYyMkgyem0xMC44IDBIMjJWMjJoLTkuMnoiLz48L3N2Zz4=" height="34" alt="Download for Windows"></a>
   &nbsp;
-  <a href="https://github.com/lucacadalora/oyenza-studio/releases/latest/download/Oyenza-Studio-Mac.dmg"><img src="https://img.shields.io/badge/Download_for_Mac-333333?style=for-the-badge&logo=apple&logoColor=white" height="34" alt="Download for Mac"></a>
+  <a href="https://github.com/Snowsant1999/AsyncIsland/releases/latest/download/Async-Island-Mac.dmg"><img src="https://img.shields.io/badge/Download_for_Mac-333333?style=for-the-badge&logo=apple&logoColor=white" height="34" alt="Download for Mac"></a>
 </p>
 
 <p align="center">
@@ -25,8 +25,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/lucacadalora/oyenza-studio/releases/latest"><img src="https://img.shields.io/github/v/release/lucacadalora/oyenza-studio?label=latest&color=F0892E" height="20" alt="Latest release"></a>
-  <a href="https://github.com/lucacadalora/oyenza-studio/blob/metrics/README.md"><img src="https://raw.githubusercontent.com/lucacadalora/oyenza-studio/metrics/badge.svg" height="20" alt="Downloads so far"></a>
+  <a href="https://github.com/Snowsant1999/AsyncIsland/releases/latest"><img src="https://img.shields.io/github/v/release/lucacadalora/oyenza-studio?label=latest&color=F0892E" height="20" alt="Latest release"></a>
+  <a href="https://github.com/Snowsant1999/AsyncIsland/blob/metrics/README.md"><img src="https://raw.githubusercontent.com/lucacadalora/oyenza-studio/metrics/badge.svg" height="20" alt="Downloads so far"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-555555" height="20" alt="MIT license"></a>
   <img src="https://img.shields.io/badge/built_with-Rust-555555?logo=rust" height="20" alt="Built with Rust">
 </p>
@@ -73,7 +73,7 @@ Open the Shelf, scan the code with your phone's camera, pick photos or files and
 
 CPU, GPU, memory, drives, network and battery: rings and gauges, each core's load, the last minute of history and the apps using the most. Read straight from Windows' own counters, with no drivers and no admin rights, and it never leaves your PC. On a Mac it reads macOS's own counters, the way Stats does. **System** is an [add-on](#add-ons): its tab shows once you switch it on, and until then nothing reads the counters.
 
-On a desktop, **Power** shows what the whole PC draws: split into the CPU, the graphics card and the rest. A Corsair HXi or RMi, or an MSI MEG Ai or MPG Ai…TS power supply reports the real number over its USB cable, with what it pulls from the wall, its efficiency and its temperature; Oyenza Studio only reads it, while the page is open. With any other power supply, the page estimates: the CPU's own reading, the graphics card's (NVIDIA cards report theirs through the driver), and about 40 W for the board, memory, drives and fans. On a Mac without a battery (a Mac mini, Studio, iMac or Mac Pro with Apple silicon), Power reads what the whole Mac draws from its own sensor, the number Stats shows as System total; macOS doesn't split it by part, so the CPU's and the graphics' load stand beside it. A MacBook keeps its Battery module.
+On a desktop, **Power** shows what the whole PC draws: split into the CPU, the graphics card and the rest. A Corsair HXi or RMi, or an MSI MEG Ai or MPG Ai…TS power supply reports the real number over its USB cable, with what it pulls from the wall, its efficiency and its temperature; Async Island only reads it, while the page is open. With any other power supply, the page estimates: the CPU's own reading, the graphics card's (NVIDIA cards report theirs through the driver), and about 40 W for the board, memory, drives and fans. On a Mac without a battery (a Mac mini, Studio, iMac or Mac Pro with Apple silicon), Power reads what the whole Mac draws from its own sensor, the number Stats shows as System total; macOS doesn't split it by part, so the CPU's and the graphics' load stand beside it. A MacBook keeps its Battery module.
 
 <p align="center"><img src="docs/brand/readme/system.webp" width="880" alt="The System page: CPU temperature, load and clock rings, usage history, each core's load and the top processes"></p>
 
@@ -99,7 +99,7 @@ The island is black by default, like the one on a phone. **Oyen** turns it warm 
 
 ### Your money, as it moves
 
-If you keep your money in [Oyenza](https://oyenza.app), sign in (optional) and the island tells you when money comes in or goes out, reminds you the day before a bill is due, and lists your week by day. Sums stay hidden until you click **Show**, so a shared screen shows only that much. Turn on **Show on Oyenza Studio** under your steps in Oyenza's Health (Sehat) on your phone and switch on the **Health** [add-on](#add-ons), and its page shows your daily steps too, with a notice when you reach your goal. On Windows.
+If you keep your money in [Oyenza](https://oyenza.app), sign in (optional) and the island tells you when money comes in or goes out, reminds you the day before a bill is due, and lists your week by day. Sums stay hidden until you click **Show**, so a shared screen shows only that much. Turn on **Show on Async Island** under your steps in Oyenza's Health (Sehat) on your phone and switch on the **Health** [add-on](#add-ons), and its page shows your daily steps too, with a notice when you reach your goal. On Windows.
 
 <p align="center"><img src="docs/brand/readme/oyenza.webp" width="880" alt="A Money in notice from BCA with the amount hidden, and the Oyenza tab listing today's transactions with hidden sums"></p>
 
@@ -146,7 +146,7 @@ On Windows it draws on your graphics card in step with your display's refresh ra
 
 ### Windows
 
-**[Download Oyenza-Studio-Setup.exe](https://github.com/lucacadalora/oyenza-studio/releases/latest/download/Oyenza-Studio-Setup.exe)** and run it. It installs just for you and needs no admin rights. Older versions and a portable zip are on the [Releases](https://github.com/lucacadalora/oyenza-studio/releases) page.
+**[Download Async-Island-Setup.exe](https://github.com/Snowsant1999/AsyncIsland/releases/latest/download/Async-Island-Setup.exe)** and run it. It installs just for you and needs no admin rights. Older versions and a portable zip are on the [Releases](https://github.com/Snowsant1999/AsyncIsland/releases) page.
 
 Builds aren't code-signed yet, so Windows SmartScreen may say "Windows protected your PC". Click **More info → Run anyway**.
 
@@ -154,7 +154,7 @@ Your data lives in `%APPDATA%\Poni\`, and cache plus log in `%LOCALAPPDATA%\Poni
 
 ### Mac
 
-macOS 14 or later, Apple silicon or Intel (one app for both): **[download Oyenza-Studio-Mac.dmg](https://github.com/lucacadalora/oyenza-studio/releases/latest/download/Oyenza-Studio-Mac.dmg)**, open it and drag Oyenza Studio into Applications (had Oyen Poni? Quit it first; Oyenza Studio moves the old app to the Trash). It's signed with an Apple Developer ID and checked by Apple: the first time, macOS only asks whether to open an app downloaded from the internet, so click **Open**. What's on the Mac so far: [On a Mac](#on-a-mac). Your data lives in `~/Library/Application Support/Poni/`, the log in `~/Library/Logs/Poni/`.
+macOS 14 or later, Apple silicon or Intel (one app for both): **[download Async-Island-Mac.dmg](https://github.com/Snowsant1999/AsyncIsland/releases/latest/download/Async-Island-Mac.dmg)**, open it and drag Async Island into Applications (had Oyen Poni? Quit it first; Async Island moves the old app to the Trash). It's signed with an Apple Developer ID and checked by Apple: the first time, macOS only asks whether to open an app downloaded from the internet, so click **Open**. What's on the Mac so far: [On a Mac](#on-a-mac). Your data lives in `~/Library/Application Support/Poni/`, the log in `~/Library/Logs/Poni/`.
 
 ## FAQ
 
@@ -162,7 +162,7 @@ macOS 14 or later, Apple silicon or Intel (one app for both): **[download Oyenza
 <summary><b>Is it free?</b></summary>
 <br>
 
-Yes. Oyenza Studio is free to download and use, and its code is open source under the [MIT license](LICENSE). Oyenza sign-in is optional.
+Yes. Async Island is free to download and use, and its code is open source under the [MIT license](LICENSE). Oyenza sign-in is optional.
 
 </details>
 
@@ -233,14 +233,14 @@ The gear at the top right of the open island opens **Settings**: your Oyenza acc
 - the idle look: clock, eyes (Oyen in his theme), minimal, hidden until you hover, or a status bar (in Pill; the other themes show the clock)
 - lyrics (and the pronunciation line under Japanese, Korean and Chinese lyrics) and sounds
 - in full-screen apps: hide, or stay on top of borderless games and videos (a game in exclusive full-screen mode still covers it), and show FPS, GPU and CPU over games
-- start with Windows, which version you have (**About Oyenza Studio**, with the build's day; it opens that version's release notes), and quit
+- start with Windows, which version you have (**About Async Island**, with the build's day; it opens that version's release notes), and quit
 - in Settings only: which version you have, with **Check now** ([New versions](#new-versions))
 
 On a Mac, every option is in the menu bar, under Oyen's mark.
 
 ### The Oyen theme
 
-The island stays black by default. Switch on the Oyen theme (the gear › **Theme › Oyen**, or right-click › **Theme › Oyen**) and the whole island becomes Oyen's: warm cream with dark brown text, his orange on the play button, the bars and the switches, and Outfit, the Oyenza Studio typeface. Oyen, the Oyenza cat, moves in too: he peeks over the island's edge while it rests, watches your pointer when it comes near, sits beside the clock, peeks up beside the pin when the island is open and bobs along while music plays. He sleeps from midnight to five. Where the island wraps a MacBook's notch, the theme goes black like the notch itself, with Oyen's cream type, his orange and his face on it. He is drawn from the Oyenza logo, not a picture, so he stays sharp at any scaling, and he only moves for a moment now and then, so he costs no CPU at rest.
+The island stays black by default. Switch on the Oyen theme (the gear › **Theme › Oyen**, or right-click › **Theme › Oyen**) and the whole island becomes Oyen's: warm cream with dark brown text, his orange on the play button, the bars and the switches, and Outfit, the Async Island typeface. Oyen, the Oyenza cat, moves in too: he peeks over the island's edge while it rests, watches your pointer when it comes near, sits beside the clock, peeks up beside the pin when the island is open and bobs along while music plays. He sleeps from midnight to five. Where the island wraps a MacBook's notch, the theme goes black like the notch itself, with Oyen's cream type, his orange and his face on it. He is drawn from the Oyenza logo, not a picture, so he stays sharp at any scaling, and he only moves for a moment now and then, so he costs no CPU at rest.
 
 ![Classic and the Oyen theme side by side: resting, with the clock, and playing music](docs/screenshots/oyen-theme.png)
 
@@ -248,9 +248,9 @@ The island stays black by default. Switch on the Oyen theme (the gear › **Them
 
 Glass turns the island into liquid glass, after Apple's Liquid Glass. Its rim bends and magnifies what's under it, the middle is frosted, a light runs along the edge, and the shadow under it deepens over busy pages. The collapsed island turns light or dark with what's behind it, and the open island follows Windows' light or dark mode. Its tint goes only as deep as the text needs to stay readable (4.5:1).
 
-To bend what's under it, Glass copies the part of the screen behind its window (the island and the space it opens into) whenever something there changes, and not while the island is hidden, a full-screen app is in front (there it draws smoked glass, so a game's frames aren't copied) or the PC is locked. The copy stays in your PC's memory and on its graphics card, and each new copy replaces the last; it's never saved or sent. While Glass is on, Windows leaves Oyenza Studio out of screenshots, screen recordings and screen sharing. On a display in HDR, Oyenza Studio maps the copy back to ordinary colours itself. Where it can't copy the screen (the software renderer, Windows 10 before version 2004, Remote Desktop, a laptop display that no graphics card lets it copy), Glass draws smoked glass instead: the same shape, light and shadow over a see-through tint, and it stays in screenshots.
+To bend what's under it, Glass copies the part of the screen behind its window (the island and the space it opens into) whenever something there changes, and not while the island is hidden, a full-screen app is in front (there it draws smoked glass, so a game's frames aren't copied) or the PC is locked. The copy stays in your PC's memory and on its graphics card, and each new copy replaces the last; it's never saved or sent. While Glass is on, Windows leaves Async Island out of screenshots, screen recordings and screen sharing. On a display in HDR, Async Island maps the copy back to ordinary colours itself. Where it can't copy the screen (the software renderer, Windows 10 before version 2004, Remote Desktop, a laptop display that no graphics card lets it copy), Glass draws smoked glass instead: the same shape, light and shadow over a see-through tint, and it stays in screenshots.
 
-On a Mac, Glass is macOS's own glass: Liquid Glass on macOS 26, and a dark blur on macOS 14 and 15. It's the dark kind, so white text stays readable over any wallpaper, and where the island meets the notch it keeps a black strip that fades into the glass. macOS draws the glass itself, so Oyenza Studio doesn't copy your screen for it. If Glass looks flat, turn off **Reduce transparency** in System Settings › Accessibility › Display.
+On a Mac, Glass is macOS's own glass: Liquid Glass on macOS 26, and a dark blur on macOS 14 and 15. It's the dark kind, so white text stays readable over any wallpaper, and where the island meets the notch it keeps a black strip that fades into the glass. macOS draws the glass itself, so Async Island doesn't copy your screen for it. If Glass looks flat, turn off **Reduce transparency** in System Settings › Accessibility › Display.
 
 ### The Pill theme
 
@@ -267,9 +267,9 @@ The pages and features are the same as in Classic.
 
 ### Show over games
 
-Switch on **Show over games** (System › Games, or right-click › In full-screen apps) and, while a game fills the screen in borderless full-screen, the island becomes a small readout: frames per second, the GPU's load and temperature and the CPU's load. It stays for as long as the game is in front; **Alt+Shift+F** hides it until the next game, and pressing it again brings it back. Any window over a borderless game, the island included, makes Windows combine the two before they reach the screen, which costs the game about a frame of delay. If you'd rather not pay it, pick **Readout › Peeks** in System › Games (or right-click › In full-screen apps › Only for a few seconds): the readout then shows for a few seconds when the game comes to the front, when the frame rate drops sharply and whenever you press Alt+Shift+F, then hides, and in between the game's frames go straight to the screen. Turning it on also lets the island show over full-screen apps; picking Hide there turns it off again. Alt+Shift+F belongs to Oyenza Studio only while a game is in front.
+Switch on **Show over games** (System › Games, or right-click › In full-screen apps) and, while a game fills the screen in borderless full-screen, the island becomes a small readout: frames per second, the GPU's load and temperature and the CPU's load. It stays for as long as the game is in front; **Alt+Shift+F** hides it until the next game, and pressing it again brings it back. Any window over a borderless game, the island included, makes Windows combine the two before they reach the screen, which costs the game about a frame of delay. If you'd rather not pay it, pick **Readout › Peeks** in System › Games (or right-click › In full-screen apps › Only for a few seconds): the readout then shows for a few seconds when the game comes to the front, when the frame rate drops sharply and whenever you press Alt+Shift+F, then hides, and in between the game's frames go straight to the screen. Turning it on also lets the island show over full-screen apps; picking Hide there turns it off again. Alt+Shift+F belongs to Async Island only while a game is in front.
 
-The frame rate is counted the way Intel's PresentMon and Xbox Game Bar count it: Windows logs every frame a game hands to the screen, and Oyenza Studio reads that log for the game in front. Nothing is loaded into the game, so there is nothing for anti-cheat to see. DirectX 9 to 12 games are counted from their own Present calls; Vulkan and OpenGL games from the graphics kernel's log of their frames. The GPU and CPU numbers come from the same readers as the System page. Nothing runs while no game is in front or while the readout is off.
+The frame rate is counted the way Intel's PresentMon and Xbox Game Bar count it: Windows logs every frame a game hands to the screen, and Async Island reads that log for the game in front. Nothing is loaded into the game, so there is nothing for anti-cheat to see. DirectX 9 to 12 games are counted from their own Present calls; Vulkan and OpenGL games from the graphics kernel's log of their frames. The GPU and CPU numbers come from the same readers as the System page. Nothing runs while no game is in front or while the readout is off.
 
 Windows lets only admins and the **Performance Log Users** group read that log. The first time, System › Games asks for a one-time OK: an admin prompt adds your Windows account to that group (Xbox Game Bar's FPS counter asks for the same), and Windows applies it the next time you sign in. Until then the FPS slot shows a dash and the rest works. To undo it, remove your account from Performance Log Users in Computer Management, or run `net localgroup "Performance Log Users" <your user name> /delete` as an admin. A game in exclusive full-screen mode still covers the island, as it covers every window.
 
@@ -283,7 +283,7 @@ The Mac pictures come from the Mac app itself (`poni --render <dir> --notch`, ru
 
 ### Apple Music lyrics
 
-Lyrics come from LRCLIB by default. With an Apple Music subscription, Oyenza Studio can show Apple Music's own synced lyrics instead: the ones the Apple Music app shows. This works whichever app is playing. LRCLIB stays the backup for songs Apple has no synced lyrics for.
+Lyrics come from LRCLIB by default. With an Apple Music subscription, Async Island can show Apple Music's own synced lyrics instead: the ones the Apple Music app shows. This works whichever app is playing. LRCLIB stays the backup for songs Apple has no synced lyrics for.
 
 It needs your Apple Music token, copied once from the web player:
 
@@ -291,35 +291,35 @@ It needs your Apple Music token, copied once from the web player:
 2. Press F12, open **Application** → **Cookies** → `https://music.apple.com`, and copy the value of `media-user-token`.
 3. Right-click the island (or the tray icon) → **Apple Music lyrics** → **Use token from clipboard**.
 
-Oyenza Studio checks the token with Apple and says whether it worked. It stores the token encrypted for your Windows account (`%LOCALAPPDATA%\Poni\apple-music-token.bin`) and clears it from the clipboard. If Windows clipboard history (Win+V) is on, delete it there too. A token lasts for months; when Apple stops accepting it, Oyenza Studio says so and you copy a fresh one. **Remove token** in the same menu turns this off.
+Async Island checks the token with Apple and says whether it worked. It stores the token encrypted for your Windows account (`%LOCALAPPDATA%\Poni\apple-music-token.bin`) and clears it from the clipboard. If Windows clipboard history (Win+V) is on, delete it there too. A token lasts for months; when Apple stops accepting it, Async Island says so and you copy a fresh one. **Remove token** in the same menu turns this off.
 
-With a token saved, Oyenza Studio sends each song's title and artist to Apple to find its lyrics. It uses the Apple Music web player's own API, which Apple doesn't publish for other apps, so it can stop working when Apple changes its site. LRCLIB keeps working either way.
+With a token saved, Async Island sends each song's title and artist to Apple to find its lyrics. It uses the Apple Music web player's own API, which Apple doesn't publish for other apps, so it can stop working when Apple changes its site. LRCLIB keeps working either way.
 
 ### Phone drop
 
 Send photos and files from your phone to the Shelf, or save Shelf files on your phone, over your own Wi-Fi. Nothing to install on the phone, and it works with iPhones and Android phones alike.
 
 1. Open the Shelf and click **Phone** (on an empty shelf, the **Phone drop** tile). A QR code opens under the shelf.
-2. Scan it with the phone's camera. The phone opens a small page that Oyenza Studio serves from your PC.
-3. Pick photos or files on the phone and tap **Send**. The island asks first: **Accept** or **Decline**. Accepted files go to `Downloads\Oyenza Studio` and onto the Shelf.
+2. Scan it with the phone's camera. The phone opens a small page that Async Island serves from your PC.
+3. Pick photos or files on the phone and tap **Send**. The island asks first: **Accept** or **Decline**. Accepted files go to `Downloads\Async Island` and onto the Shelf.
 4. The page also lists the files on the Shelf. Tap **Save** to keep one on the phone.
 
 | | |
 |---|---|
 | ![Phone drop open: the QR code waits for a phone](docs/screenshots/page-shelf-phone.png) | ![An iPhone asks to send three files](docs/screenshots/page-shelf-phone-ask.png) |
 
-The phone and the PC need the same Wi-Fi; guest networks often keep devices apart. The first time, Windows asks whether Oyenza Studio may use the network: allow it on private networks. If Windows treats your Wi-Fi as a public network, set it to private (Settings > Network & internet > Wi-Fi), or the phone can't reach the PC.
+The phone and the PC need the same Wi-Fi; guest networks often keep devices apart. The first time, Windows asks whether Async Island may use the network: allow it on private networks. If Windows treats your Wi-Fi as a public network, set it to private (Settings > Network & internet > Wi-Fi), or the phone can't reach the PC.
 
-Each session gets a new secret link that only the QR code carries. It stops working when you click **Done**, and after 10 minutes without a phone. Oyenza Studio reads nothing from an upload before you accept, keeps a transfer only when every file arrived, and never sends anything through the internet. Files travel over your Wi-Fi without extra encryption on top of the Wi-Fi's own, so use Phone drop on networks you trust rather than public hotspots.
+Each session gets a new secret link that only the QR code carries. It stops working when you click **Done**, and after 10 minutes without a phone. Async Island reads nothing from an upload before you accept, keeps a transfer only when every file arrived, and never sends anything through the internet. Files travel over your Wi-Fi without extra encryption on top of the Wi-Fi's own, so use Phone drop on networks you trust rather than public hotspots.
 
 This isn't AirDrop. An iPhone only AirDrops over Apple's own Wi-Fi link (AWDL), which Windows Wi-Fi drivers can't run, so Phone drop uses the phone's browser instead.
 
 #### Paired phones: send from any network
 
-Pair a phone once, and it finds this PC from any network, whenever Oyenza Studio runs: the same Wi-Fi, another Wi-Fi or mobile data.
+Pair a phone once, and it finds this PC from any network, whenever Async Island runs: the same Wi-Fi, another Wi-Fi or mobile data.
 
 1. In the phone panel, click **Pair a phone** and scan the new code. The phone opens `drop.oyenza.com` and says it's paired.
-2. Keep that page: on an iPhone, tap Share › **Add to Home Screen**; on Android, install it (Chrome or Samsung Internet). Android then lists **Oyenza Studio** in the share sheet.
+2. Keep that page: on an iPhone, tap Share › **Add to Home Screen**; on Android, install it (Chrome or Samsung Internet). Android then lists **Async Island** in the share sheet.
 3. Send from the share sheet or from the page. Files from your own paired phones go straight onto the Shelf, with a notice on the island.
 
 | | |
@@ -332,7 +332,7 @@ The phone and PC meet through a small server (`drop.oyenza.com`, code in [`serve
 
 ### Oyenza (optional)
 
-If you keep your money in [Oyenza](https://oyenza.app), the island can show it. Signing in is optional and works like a TV: no password is typed into Oyenza Studio.
+If you keep your money in [Oyenza](https://oyenza.app), the island can show it. Signing in is optional and works like a TV: no password is typed into Async Island.
 
 1. Open the island, press the gear at the top right, and choose **Sign in with Oyenza** (the Oyenza tab has the same button; right-click the island or the tray icon → **Oyenza** → **Sign in to Oyenza…** works too; on a Mac, the menu bar under Oyen's mark). The island shows an 8-letter code.
 2. Open oyenza.app/connect on your phone or this computer (**Open oyenza.app** fills the code in), check the computer's name, and choose **Connect**.
@@ -343,14 +343,14 @@ Then the island shows:
 - **Money in and out as it happens**: a notice when Oyenza logs money by itself from your bank's emails or notifications, "Money in · BCA" or "Money out · BCA". Sums and who stay hidden until you click **Show**, there and in the tab, so a shared screen shows only that much.
 - **Bills before they're due**: a reminder the day before a subscription renews or a card bill is due.
 - **Note a spend**: type it in the **Oyenza** tab ("kopi 25rb") and press Enter; it goes straight to Oyenza, with Undo for 10 seconds.
-- **Your weeks on Today**: in oyenza.app, under Connected apps › Oyenza Studio, switch on **Google Calendar** or **Gmail**, and the **Today** tab shows the meeting on now (with **Join** for a Google Meet, Zoom, Teams or Webex link), the rest of today, then the next five weeks: your events (click one to open it in Google Calendar), the flights Oyenza found in your booking emails and the bills due, with a dot under each date in the grid for what's on it. An app switched off for Studio says so, with **Turn on**. Signed out, Today offers **Sign in with Oyenza**.
-- **Your steps**: in Oyenza on your iPhone or Android, turn on **Show on Oyenza Studio** under your steps in Health (Sehat), switch on **Health** in Add-ons, and its tab shows today's steps against your goal, the distance, active energy and your week, with a notice when you reach the goal. Oyenza on the phone sends them while it's open there, and newer versions of Oyenza also with the app closed (about once an hour on an iPhone, every 15 minutes or so on Android); numbers more than two hours old stay, with a reminder to open Oyenza on your phone.
+- **Your weeks on Today**: in oyenza.app, under Connected apps › Async Island, switch on **Google Calendar** or **Gmail**, and the **Today** tab shows the meeting on now (with **Join** for a Google Meet, Zoom, Teams or Webex link), the rest of today, then the next five weeks: your events (click one to open it in Google Calendar), the flights Oyenza found in your booking emails and the bills due, with a dot under each date in the grid for what's on it. An app switched off for Studio says so, with **Turn on**. Signed out, Today offers **Sign in with Oyenza**.
+- **Your steps**: in Oyenza on your iPhone or Android, turn on **Show on Async Island** under your steps in Health (Sehat), switch on **Health** in Add-ons, and its tab shows today's steps against your goal, the distance, active energy and your week, with a notice when you reach the goal. Oyenza on the phone sends them while it's open there, and newer versions of Oyenza also with the app closed (about once an hour on an iPhone, every 15 minutes or so on Android); numbers more than two hours old stay, with a reminder to open Oyenza on your phone.
 
-This PC gets a key of its own that can do only these things: it reads the last 7 days of transactions in the space where Oyenza logs your bank's emails and notifications, never balances, account numbers, notes or receipts, and it can't change or delete anything else or touch your account. With **Show on Oyenza Studio** on, it also receives the daily totals of steps, distance and active energy for the last 7 days and your step goal, and keeps them in memory only, never on disk; sleep, heart rate and weight never reach the PC. With Google Calendar or Gmail switched on for Today, it receives the events of today and the next five weeks (title, times, place, one meeting link and the event's own Google Calendar link) and the flights in those weeks, also in memory only; guests, event notes and your emails never reach it. The key is stored encrypted for your Windows account (`%LOCALAPPDATA%\Poni\oyenza-link.bin`); on a Mac, in a file only your Mac account can read (`~/Library/Application Support/Poni/oyenza-link.bin`). Oyenza Studio asks Oyenza once a minute while you use the PC (every 3 minutes on battery, never while it's locked or asleep), every 15 seconds while the Oyenza tab is open, for your steps every 15 minutes and when the Health tab opens (only while the Health add-on is on), and for your day when the Today tab opens and every 5 minutes while it stays open. **Disconnect** in Settings (or **Oyenza › Disconnect** in the menu) signs this PC out; you can also disconnect it in oyenza.app under Connected apps.
+This PC gets a key of its own that can do only these things: it reads the last 7 days of transactions in the space where Oyenza logs your bank's emails and notifications, never balances, account numbers, notes or receipts, and it can't change or delete anything else or touch your account. With **Show on Async Island** on, it also receives the daily totals of steps, distance and active energy for the last 7 days and your step goal, and keeps them in memory only, never on disk; sleep, heart rate and weight never reach the PC. With Google Calendar or Gmail switched on for Today, it receives the events of today and the next five weeks (title, times, place, one meeting link and the event's own Google Calendar link) and the flights in those weeks, also in memory only; guests, event notes and your emails never reach it. The key is stored encrypted for your Windows account (`%LOCALAPPDATA%\Poni\oyenza-link.bin`); on a Mac, in a file only your Mac account can read (`~/Library/Application Support/Poni/oyenza-link.bin`). Async Island asks Oyenza once a minute while you use the PC (every 3 minutes on battery, never while it's locked or asleep), every 15 seconds while the Oyenza tab is open, for your steps every 15 minutes and when the Health tab opens (only while the Health add-on is on), and for your day when the Today tab opens and every 5 minutes while it stays open. **Disconnect** in Settings (or **Oyenza › Disconnect** in the menu) signs this PC out; you can also disconnect it in oyenza.app under Connected apps.
 
 ### New versions
 
-Oyenza Studio looks for a new version a couple of minutes after it starts and then every hour, by reading one small signed file from studio.oyenza.com. It doesn't look while your PC is locked, the screen is off or battery saver is on. **Check for updates…** in the menu looks right away and says on the island what it found; **Check now** in Settings does the same and answers there. When there is a new version, the island says **Update available** with the version and keeps saying it until you click it or **Hide** it. The new version is already downloaded by then, and checked: click the notice for the Update sheet, then **Install now** (Oyenza Studio closes, updates and opens again in a few seconds, your settings and data stay) or **Install on next start**. On a Mac this works where Oyenza Studio can replace itself, as in Applications; opened straight from the DMG, its sheet downloads the DMG instead. Until you update, the right-click menu starts with **Update to Oyenza Studio x…** and Settings has a last row with **Update**. After you update, the island says **Updated to x** once, with **What's new**. Versions 0.2.5 and older don't look: update them by hand once. How the file is made and signed: [docs/updates.md](docs/updates.md).
+Async Island looks for a new version a couple of minutes after it starts and then every hour, by reading one small signed file from studio.oyenza.com. It doesn't look while your PC is locked, the screen is off or battery saver is on. **Check for updates…** in the menu looks right away and says on the island what it found; **Check now** in Settings does the same and answers there. When there is a new version, the island says **Update available** with the version and keeps saying it until you click it or **Hide** it. The new version is already downloaded by then, and checked: click the notice for the Update sheet, then **Install now** (Async Island closes, updates and opens again in a few seconds, your settings and data stay) or **Install on next start**. On a Mac this works where Async Island can replace itself, as in Applications; opened straight from the DMG, its sheet downloads the DMG instead. Until you update, the right-click menu starts with **Update to Async Island x…** and Settings has a last row with **Update**. After you update, the island says **Updated to x** once, with **What's new**. Versions 0.2.5 and older don't look: update them by hand once. How the file is made and signed: [docs/updates.md](docs/updates.md).
 
 ### Add-ons
 
@@ -363,25 +363,25 @@ The **+** at the end of the tabs lists features that stay off until you switch t
 
 **Japanese readings** (3.8 MB) gives romaji under the kanji in Japanese lyrics on PCs where Windows can't read them (Windows keeps its Japanese reading data in the Japanese typing feature, which most PCs outside Japan don't have). Only people who play Japanese songs get it: the first time a song's kanji go unread, it switches itself on and downloads once, and the romaji show a moment later. Switch it off in Add-ons and it stays off; the Music page then offers it under the lyrics, one click away. Kana, Korean and Chinese read without it. On a Mac it gives romaji under every kanji the same way, and the Mac's Add-ons tab switches it too. Details in [addons/ja](addons/ja/README.md).
 
-**Health** (built in, nothing to download) adds the **Health** tab: your steps from Oyenza on your phone, today against your goal and your week ([how to send them](#oyenza-optional)). It was a tab for everyone until 0.2.8. Switched off, there's no tab and Oyenza Studio never asks Oyenza for your steps.
+**Health** (built in, nothing to download) adds the **Health** tab: your steps from Oyenza on your phone, today against your goal and your week ([how to send them](#oyenza-optional)). It was a tab for everyone until 0.2.8. Switched off, there's no tab and Async Island never asks Oyenza for your steps.
 
 **System** (built in, nothing to download) adds the **System** tab: [your whole computer on one page](#your-whole-computer-on-one-page). It was a tab for everyone until 0.2.8 and is now off until you switch it on. Switched off, there's no tab and nothing reads the counters at rest; Show over games keeps its own switch.
 
 **Stocks** (built in, nothing to download) adds a **Stocks** tab, laid out like Apple's Stocks on a Mac: the IHSG and up to 10 stocks on the Indonesia Stock Exchange, each with its day's line against the previous close, its price and a change pill (click any pill to switch them all between percent, points and market cap). The one you pick fills the right side: its chart over 1D, 1M, 6M or 1Y (point at the chart to read any moment), and the day's open, high and low, volume, value traded, market cap and 52-week high and low. **Add a stock** searches every listed stock by code or name; **Edit** removes and reorders them. Prices come from [oyenza.trade](https://oyenza.trade), 10 minutes behind the exchange like every free IDX feed, and are asked for only while the tab is open. Switched off, there's no tab and nothing is asked.
 
-**Notifications** (built in, nothing to download; Windows) puts other apps' notifications on the island: a WhatsApp or Telegram message, or your phone's through Phone Link, shows who it's from and the message for 8 seconds, and **Open** (or a click on it) opens the app. It adds a **Notifications** tab: every app that has sent a notification since you switched it on, each with a switch (WhatsApp, Telegram and Phone Link start on, the rest off), and **Who it's from** and **Message text** switches (off, they wait for **Show**, like a Money in notice). Windows asks you once before Oyenza Studio may read notifications, and you can take it back in Windows Settings > Privacy & security > Notifications. Windows lets only an app installed as a package read them, so it works in the Microsoft Store copy; the download from GitHub says so on the tab. Nothing is sent anywhere or written down: Windows keeps its own list, as always. In Telegram Desktop, turn on Settings > Notifications and Sounds > Use Windows notifications. Switched off, there's no tab and nothing listens.
+**Notifications** (built in, nothing to download; Windows) puts other apps' notifications on the island: a WhatsApp or Telegram message, or your phone's through Phone Link, shows who it's from and the message for 8 seconds, and **Open** (or a click on it) opens the app. It adds a **Notifications** tab: every app that has sent a notification since you switched it on, each with a switch (WhatsApp, Telegram and Phone Link start on, the rest off), and **Who it's from** and **Message text** switches (off, they wait for **Show**, like a Money in notice). Windows asks you once before Async Island may read notifications, and you can take it back in Windows Settings > Privacy & security > Notifications. Windows lets only an app installed as a package read them, so it works in the Microsoft Store copy; the download from GitHub says so on the tab. Nothing is sent anywhere or written down: Windows keeps its own list, as always. In Telegram Desktop, turn on Settings > Notifications and Sounds > Use Windows notifications. Switched off, there's no tab and nothing listens.
 
 **IELTS** (built in, nothing to download) adds an **IELTS** tab: Oyen becomes your IELTS Speaking examiner, GoPrep-style. Sign in to Oyenza, pick a level (1 to 5; each opens once you reach the target band on the level before it) and how Oyen talks to you in Indonesian (**Sopan**, **Gaul** or **Ngegas**), and press **Mulai**. He asks Part 1 to 3 out loud, in English; tap the mic to answer and tap again when you're done (it stops by itself at the question's time). Part 2 gives you its card and a minute to prepare, then records by itself. At the end: your band, Fluency & Coherence, Lexical Resource, Grammar and Pronunciation with his notes, a roast and three tips. Music pauses while he talks or you answer and plays again after. Your answers go to Oyenza's server to be heard (see [PRIVACY.md](PRIVACY.md)); switched off, there's no tab, no microphone and nothing asked. IELTS® is a trademark of the IELTS partners; this isn't official IELTS material and isn't endorsed by them. On a Mac the tab says it's coming soon.
 
-**Meeting notes** (built in, nothing to download; Windows) adds a **Notes** tab: one click and Oyen listens to your meeting, then writes it up. Sign in to Oyenza and press the record button under him. He hears your microphone and your PC's own sound together, so a call in Google Meet, Zoom, Teams or WhatsApp is heard with no bot joining it, and a meeting in the room through the microphone; his head moves with the voices, a bar for each shows they're coming through, and the closed island shows him listening with the time. Press **Stop** when it's over: the meeting goes to Oyenza's server, Oyen writes for a minute or two (you can close the island; a notice says when the notes are ready), and the notes are saved to Documents › Oyenza Studio › Notes as a Markdown file: a title, a summary, the decisions, the action items with who and when, the topics, and the whole transcript with who said what. **Open notes**, **Copy** (the notes without the transcript, ready to paste into a chat or a doc) and the folder are on the page. Meetings up to 3 hours are written up. If something goes wrong, the recording stays on your PC for **Try again** until you throw it away. Let the people in the meeting know you're taking notes. Your meeting goes to Oyenza's server to be written up (see [PRIVACY.md](PRIVACY.md)); switched off, there's no tab, no recording and nothing sent.
+**Meeting notes** (built in, nothing to download; Windows) adds a **Notes** tab: one click and Oyen listens to your meeting, then writes it up. Sign in to Oyenza and press the record button under him. He hears your microphone and your PC's own sound together, so a call in Google Meet, Zoom, Teams or WhatsApp is heard with no bot joining it, and a meeting in the room through the microphone; his head moves with the voices, a bar for each shows they're coming through, and the closed island shows him listening with the time. Press **Stop** when it's over: the meeting goes to Oyenza's server, Oyen writes for a minute or two (you can close the island; a notice says when the notes are ready), and the notes are saved to Documents › Async Island › Notes as a Markdown file: a title, a summary, the decisions, the action items with who and when, the topics, and the whole transcript with who said what. **Open notes**, **Copy** (the notes without the transcript, ready to paste into a chat or a doc) and the folder are on the page. Meetings up to 3 hours are written up. If something goes wrong, the recording stays on your PC for **Try again** until you throw it away. Let the people in the meeting know you're taking notes. Your meeting goes to Oyenza's server to be written up (see [PRIVACY.md](PRIVACY.md)); switched off, there's no tab, no recording and nothing sent.
 
 **Script reader** (built in, nothing to download) adds a **Script** tab: a teleprompter right under your webcam. Paste a script or drop a `.txt` file on the island and press **Read**. The line to say stays bright with the next ones dim below, moving a line at a time at 60 to 300 words a minute. Space pauses, the arrow keys step a line or change the pace, and on Windows **Alt+Shift+S** pauses or resumes from any app. On Windows the island stays out of screen shares and recordings while the page shows; macOS no longer lets an app keep itself out of captures, so on a Mac it shows in full-screen shares. Switched off, there's no tab, no shortcut and nothing running.
 
-**Screen recorder** (built in, nothing to download) adds a **Record** tab once [Oyenza Studio Recorder](https://studio.oyenza.com/) is installed: the island becomes the recorder's face, so the recorder shows no floating bar of its own. Pick **Screen** (the screen the island is on), **Window** or **Area** (the recorder's overlay asks for the window or the area), switch the **Camera**, **Mic** and **Sound** on or off, and press **Record**. While it records, the closed island shows the red dot and the time ahead of everything else; open it for **Pause** and **Stop**, which saves the video and opens the recorder's editor. The island stays out of the video. It switches itself on with the recorder (switch it off in Add-ons to get the recorder's own bar back) and is Windows-only for now.
+**Screen recorder** (built in, nothing to download) adds a **Record** tab once [Async Island Recorder](https://studio.oyenza.com/) is installed: the island becomes the recorder's face, so the recorder shows no floating bar of its own. Pick **Screen** (the screen the island is on), **Window** or **Area** (the recorder's overlay asks for the window or the area), switch the **Camera**, **Mic** and **Sound** on or off, and press **Record**. While it records, the closed island shows the red dot and the time ahead of everything else; open it for **Pause** and **Stop**, which saves the video and opens the recorder's editor. The island stays out of the video. It switches itself on with the recorder (switch it off in Add-ons to get the recorder's own bar back) and is Windows-only for now.
 
 ## Build
 
-Oyenza Studio is a Cargo workspace:
+Async Island is a Cargo workspace:
 
 | Crate | What |
 |---|---|
@@ -412,7 +412,7 @@ cargo build -p poni --release        # target/release/poni
 target/release/poni --render shots --notch   # every island state as a picture, with a MacBook's notch
 ```
 
-`tools/make_mac_app.sh` turns the Apple silicon and Intel builds into `Oyenza Studio.app` and its DMG (the `mac` workflow does it for every pull request, push to main and tag). From Linux or Windows, `cargo mcheck` type-checks the Mac app (`rustup target add aarch64-apple-darwin`).
+`tools/make_mac_app.sh` turns the Apple silicon and Intel builds into `Async Island.app` and its DMG (the `mac` workflow does it for every pull request, push to main and tag). From Linux or Windows, `cargo mcheck` type-checks the Mac app (`rustup target add aarch64-apple-darwin`).
 
 ### Testing without clicking around
 
@@ -436,7 +436,7 @@ The README's feature pictures are drawn from those same screenshots by `tools/ma
 
 ### Download stats
 
-[The stats page](https://github.com/lucacadalora/oyenza-studio/blob/metrics/README.md) shows downloads per release and per day. Every hour `.github/workflows/metrics.yml` reads GitHub's download counters with `tools/download_metrics.py` and keeps the history on the `metrics` branch. Downloads made by our own CI (the install test fetches the 0.1.1 installer on every push) are left out. The app itself counts nothing.
+[The stats page](https://github.com/Snowsant1999/AsyncIsland/blob/metrics/README.md) shows downloads per release and per day. Every hour `.github/workflows/metrics.yml` reads GitHub's download counters with `tools/download_metrics.py` and keeps the history on the `metrics` branch. Downloads made by our own CI (the install test fetches the 0.1.1 installer on every push) are left out. The app itself counts nothing.
 
 ## Status
 
@@ -444,7 +444,7 @@ Early, but in daily use on Windows 11. The Mac app is newer: it runs on GitHub's
 
 ## Credits
 
-- Synced lyrics come from [LRCLIB](https://lrclib.net), a free and open lyrics database. Oyenza Studio fetches them only while a song plays and caches them on your PC.
+- Synced lyrics come from [LRCLIB](https://lrclib.net), a free and open lyrics database. Async Island fetches them only while a song plays and caches them on your PC.
 - With your token, lyrics can also come from [Apple Music](https://music.apple.com) (see [Apple Music lyrics](#apple-music-lyrics)).
 - Phone drop follows the design of [Windfall](https://github.com/UvejsGj/Windfall)'s phone page (MIT). QR codes come from [qrcodegen](https://github.com/nayuki/QR-Code-generator) (MIT).
 - Romaji under Japanese lyrics comes from Windows' own reading analyzer or, on PCs without Windows' Japanese data, from [mecab-ipadic](https://taku910.github.io/mecab/) read with [vibrato](https://github.com/daac-tools/vibrato) (MIT/Apache-2.0).
@@ -455,4 +455,4 @@ Early, but in daily use on Windows 11. The Mac app is newer: it runs on GitHub's
 
 ## License
 
-The code is [MIT](LICENSE). The Oyenza Studio name, its logo and the Oyen character (the files in `docs/brand`, `installer/art` and the app icon) are not covered by the MIT license, so please don't reuse them in other projects. The Japanese reading dictionary (`crates/poni-core/data/ja-readings.dic.zst`, the Japanese readings add-on) is derived from mecab-ipadic and keeps its own license, which the add-on's `NOTICE.txt` carries. [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt), which ships with every download, holds that license and those of the Unicode data and the Rust crates Oyenza Studio is built from.
+The code is [MIT](LICENSE). The Async Island name, its logo and the Oyen character (the files in `docs/brand`, `installer/art` and the app icon) are not covered by the MIT license, so please don't reuse them in other projects. The Japanese reading dictionary (`crates/poni-core/data/ja-readings.dic.zst`, the Japanese readings add-on) is derived from mecab-ipadic and keeps its own license, which the add-on's `NOTICE.txt` carries. [THIRD-PARTY-NOTICES.txt](THIRD-PARTY-NOTICES.txt), which ships with every download, holds that license and those of the Unicode data and the Rust crates Async Island is built from.

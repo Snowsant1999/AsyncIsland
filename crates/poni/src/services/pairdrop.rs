@@ -6,7 +6,7 @@
 //! With no paired phone it asks nothing at all. With one or more, a worker
 //! thread keeps one request open at the meeting server (about one small
 //! HTTPS request every 25 s, no CPU in between), so a phone on any network
-//! finds this PC whenever Oyenza Studio runs.
+//! finds this PC whenever Async Island runs.
 
 use crate::events::{AppEvent, EventSink};
 use crate::services::http::{Client, FetchError, Method, MtaGuard};

@@ -456,7 +456,7 @@ pub fn replaces(kept: Option<&Snapshot>, new: &Snapshot) -> bool {
     }
 }
 
-/// A service whose only way in is a key typed into Oyenza Studio: every
+/// A service whose only way in is a key typed into Async Island: every
 /// one of its wants is a [`Want::Secret`], and none of its variables is set
 /// (`var_set`: OpenRouter also takes `OPENROUTER_API_KEY`). The worker reads
 /// such a service only while one of its keys is kept or the person added it.

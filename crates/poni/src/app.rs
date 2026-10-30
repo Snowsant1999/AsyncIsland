@@ -232,7 +232,7 @@ thread_local! {
     static REC_MISSED: RefCell<Vec<(poni_core::recorder::Message, isize)>> = const { RefCell::new(Vec::new()) };
 }
 
-/// A message from Oyenza Studio Recorder (`poni_core::recorder`), read while
+/// A message from Async Island Recorder (`poni_core::recorder`), read while
 /// it waits in `SendMessageTimeout`: true tells it the island shows the
 /// recording (or its Record page), so it keeps its own bar and controls
 /// hidden; false, that it should show them.
@@ -602,7 +602,7 @@ impl App {
         island.set_floating(pill::on(st.settings.theme).then_some(pill::TOP_GAP));
         let clock = FrameClock::start(SendHwnd::new(hwnd), monitor.handle);
         let taskbar_created_msg = unsafe { RegisterWindowMessageW(w!("TaskbarCreated")) };
-        // Oyenza Studio Recorder installed: the Record tab can show (one registry read).
+        // Async Island Recorder installed: the Record tab can show (one registry read).
         st.recorder = selftest_dir.is_none() && services::recorder::installed();
         let selftest = selftest_dir.map(selftest::SelfTest::new);
         let saved_settings = st.settings.clone();
@@ -2646,7 +2646,7 @@ impl App {
         self.set_script_hotkey(can_read && self.selftest.is_none());
     }
 
-    /// Oyenza Studio Recorder's word on its recording, or "show yourself"
+    /// Async Island Recorder's word on its recording, or "show yourself"
     /// (`recorder_message`). True when the island takes it: it shows the
     /// recording, or opened on its Record page.
     fn on_recorder_message(&mut self, m: poni_core::recorder::Message, sender: isize) -> bool {

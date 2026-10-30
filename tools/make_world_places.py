@@ -171,7 +171,7 @@ def tile(lat: float, lng: float) -> str:
 
 
 HEADER = (
-    "# Oyenza Studio, Prayer times. Cities: GeoNames (https://www.geonames.org), CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). "
+    "# Async Island, Prayer times. Cities: GeoNames (https://www.geonames.org), CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). "
     f"Clocks: the IANA time zone database, {FIRST_YEAR} to {END_YEAR - 1}. Built by tools/make_world_places.py."
 )
 

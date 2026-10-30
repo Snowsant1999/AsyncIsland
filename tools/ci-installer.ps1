@@ -74,7 +74,7 @@ $uninstKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall\Poni"
 function PoniEntries {
     $roots = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Uninstall", "HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall"
     @($roots | ForEach-Object { Get-ChildItem $_ -ErrorAction SilentlyContinue } |
-        ForEach-Object { Get-ItemProperty $_.PSPath } | Where-Object { $_.DisplayName -like "*Poni*" -or $_.DisplayName -like "*Oyenza Studio*" })
+        ForEach-Object { Get-ItemProperty $_.PSPath } | Where-Object { $_.DisplayName -like "*Poni*" -or $_.DisplayName -like "*Async Island*" })
 }
 
 # 1. The previous release, the way people have it today.
@@ -109,7 +109,7 @@ if ($shown) {
     WindowShot "2-components" $h
     ClickNext $h; Start-Sleep -Seconds 8  # installs, then moves on to the finish page by itself
     WindowShot "3-finish" $h
-    ClickNext $h  # Finish, with "Launch Oyenza Studio now" ticked
+    ClickNext $h  # Finish, with "Launch Async Island now" ticked
     $walked = WaitFor { $p.HasExited } 30
 }
 if (-not $walked) {
@@ -121,15 +121,15 @@ Check "walked through the installer pages" $walked "otherwise installed with /S"
 
 # 3. What the upgrade left behind.
 $entry = Get-ItemProperty $uninstKey -ErrorAction SilentlyContinue
-Check "Installed apps name" ($entry.DisplayName -eq "Oyenza Studio") "$($entry.DisplayName)"
+Check "Installed apps name" ($entry.DisplayName -eq "Async Island") "$($entry.DisplayName)"
 Check "Installed apps version" ($entry.DisplayVersion -eq $Version) "$($entry.DisplayVersion)"
 $entries = PoniEntries
 Check "one Installed apps entry" ($entries.Count -eq 1) (($entries | ForEach-Object { $_.DisplayName }) -join ", ")
-Check "new Start menu shortcut" (Test-Path (Join-Path $programs "Oyenza Studio.lnk"))
+Check "new Start menu shortcut" (Test-Path (Join-Path $programs "Async Island.lnk"))
 Check "old Start menu shortcut removed" (-not (Test-Path (Join-Path $programs "Poni.lnk")))
 if ($Previous) { Check "Oyen Poni shortcut removed" (-not (Test-Path (Join-Path $programs "Oyen Poni.lnk"))) }
 $vi = (Get-Item $exe -ErrorAction SilentlyContinue).VersionInfo
-Check "poni.exe product name" ($vi.ProductName -eq "Oyenza Studio") "$($vi.ProductName)"
+Check "poni.exe product name" ($vi.ProductName -eq "Async Island") "$($vi.ProductName)"
 Check "poni.exe version" ($vi.ProductVersion -eq $Version) "$($vi.ProductVersion)"
 $notices = Join-Path $installDir "THIRD-PARTY-NOTICES.txt"
 Check "license notices installed" (Test-Path $notices) $notices
@@ -150,7 +150,7 @@ Get-Process poni -ErrorAction SilentlyContinue | Stop-Process -Force
 
 # 5. The app's own update (crates/poni/src/services/update.rs): this Setup again with /S /reopen over a running
 #    copy. It closes that copy, leaves Start with Windows as it was (off here), and opens the app again: the
-#    finish page's "Launch Oyenza Studio now" never shows in silent mode.
+#    finish page's "Launch Async Island now" never shows in silent mode.
 $runKey = "HKCU:\Software\Microsoft\Windows\CurrentVersion\Run"
 Remove-ItemProperty -Path $runKey -Name "Poni" -ErrorAction SilentlyContinue
 Start-Process -FilePath $exe
@@ -172,7 +172,7 @@ $gone = WaitFor { -not (Test-Path $exe) } 30
 Check "uninstall removes the app" $gone
 Check "uninstall removes the license notices" (WaitFor { -not (Test-Path $notices) } 15)
 Check "uninstall removes the Installed apps entry" (-not (Test-Path $uninstKey))
-Check "uninstall removes the shortcut" (-not (Test-Path (Join-Path $programs "Oyenza Studio.lnk")))
+Check "uninstall removes the shortcut" (-not (Test-Path (Join-Path $programs "Async Island.lnk")))
 if ($Previous) { Check "uninstall keeps settings and data" (Test-Path $marker) }
 
 $results | ConvertTo-Json | Set-Content (Join-Path $Out "results.json")

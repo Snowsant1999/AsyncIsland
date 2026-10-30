@@ -62,7 +62,7 @@ if [ -n "$browser" ]; then
 else
   echo "(no Edge or Chrome: the browser check is skipped)"
 fi
-# Oyenza Studio Recorder's side of the island's message port: a message sent
+# Async Island Recorder's side of the island's message port: a message sent
 # from another process the way the recorder sends it (CoreFoundation's
 # CFMessagePortSendRequest, through Python's ctypes). The island's reply 1
 # means it took it; anything else fails the run.
@@ -107,7 +107,7 @@ PY
 # reading them asks nobody, in the first keychain of the search list (the
 # signing check puts its own there alone), where the reader's search finds
 # them. The app checks them only with PONI_SMOKE_KEYCHAIN.
-kc_service="Oyenza Studio smoke"
+kc_service="Async Island smoke"
 kc_file=$(security list-keychains -d user | head -1 | sed -e 's/^[[:space:]]*"//' -e 's/"[[:space:]]*$//')
 security delete-generic-password -s "$kc_service" -a absent > /dev/null 2>&1
 if security add-generic-password -U -s "$kc_service" -a plain -w '{"claudeAiOauth":{"accessToken":"test-token"}}' "$kc_file" \
@@ -160,7 +160,7 @@ while kill -0 $pid 2>/dev/null && [ $SECONDS -lt $deadline ]; do
           echo "the browser: pid $browser_pid"
           sleep 1
         fi ;;
-      # A recording, then its end, as Oyenza Studio Recorder tells the island.
+      # A recording, then its end, as Async Island Recorder tells the island.
       *record-port) recorder_say '{"v":1,"event":"state","state":"recording","elapsed_ms":754000}' ;;
       *record-stop) recorder_say '{"v":1,"event":"state","state":"idle","elapsed_ms":0}' ;;
     esac

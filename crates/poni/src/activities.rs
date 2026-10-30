@@ -29,7 +29,7 @@ pub enum Activity {
     Prayer,
     /// Show over games: frame rate, GPU and CPU while a full-screen app is in front.
     Game,
-    /// A screen recording with Oyenza Studio Recorder: its dot and time.
+    /// A screen recording with Async Island Recorder: its dot and time.
     Recording,
     /// Meeting notes: Oyen listening (his head moving with the voices, the
     /// red dot and the time), then writing the notes.

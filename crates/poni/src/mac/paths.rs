@@ -42,7 +42,7 @@ pub fn lock_path() -> PathBuf {
     cache_dir().join("poni.lock")
 }
 
-/// Where files from a phone land (Phone drop): `~/Downloads/Oyenza Studio`, or
+/// Where files from a phone land (Phone drop): `~/Downloads/Async Island`, or
 /// `~/Downloads/Oyen Poni` where a copy from before the rename made it: Shelf
 /// items link to the files in it.
 pub fn phone_inbox_dir() -> PathBuf {
@@ -51,7 +51,14 @@ pub fn phone_inbox_dir() -> PathBuf {
     }
     let downloads = std::env::var_os("HOME").map(PathBuf::from).unwrap_or_else(|| PathBuf::from(".")).join("Downloads");
     let before_rename = downloads.join("Oyen Poni");
-    if before_rename.is_dir() { before_rename } else { downloads.join("Oyenza Studio") }
+    let before_async = downloads.join("Oyenza Studio");
+    if before_async.is_dir() {
+        before_async
+    } else if before_rename.is_dir() {
+        before_rename
+    } else {
+        downloads.join("Async Island")
+    }
 }
 
 pub fn lyrics_cache_dir() -> PathBuf {

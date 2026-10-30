@@ -20,7 +20,7 @@ import urllib.request
 
 CHART = "https://rss.applemarketingtools.com/api/v2/jp/music/most-played/{n}/songs.json"
 SEARCH = "https://lrclib.net/api/search?"
-HEADERS = {"User-Agent": "Oyenza Studio CI (https://github.com/lucacadalora/oyenza-studio)"}
+HEADERS = {"User-Agent": "Async Island CI (https://github.com/Snowsant1999/AsyncIsland)"}
 
 
 def get_json(url, tries=4, timeout=45):

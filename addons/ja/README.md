@@ -22,7 +22,7 @@ Each one's size and SHA-256 are built into the app (`poni_core::addons::JAPANESE
 and `cargo test -p poni-core addons` checks that they match the files here.
 
 - `ja-readings.dic.zst` is `crates/poni-core/data/ja-readings.dic.zst`:
-  mecab-ipadic trimmed for lyrics, with Oyenza Studio's fixes
+  mecab-ipadic trimmed for lyrics, with Async Island's fixes
   (`tools/ja_dict_fixes.csv`), compiled for vibrato and packed with zstd by
   `tools/make_ja_dict.py`. The `ja-dict` workflow checks that the file is
   exactly what the script builds.

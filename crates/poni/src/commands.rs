@@ -175,7 +175,7 @@ pub enum Command {
     /// The Script page's Paste: the clipboard's text, line breaks kept,
     /// becomes the script.
     ScriptPaste,
-    /// The Script page's Record: Oyenza Studio Recorder records the screen
+    /// The Script page's Record: Async Island Recorder records the screen
     /// the island is on (`services::recorder`).
     RecordScreen,
     /// The Record page's Record: a recording of `settings.record`'s target

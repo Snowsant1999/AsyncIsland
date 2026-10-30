@@ -1,5 +1,5 @@
-# Removes the Oyenza Studio test copy and stops trusting its certificate,
-# then starts the usual Oyenza Studio again if it's installed. README.txt has
+# Removes the Async Island test copy and stops trusting its certificate,
+# then starts the usual Async Island again if it's installed. README.txt has
 # the whole story. Windows PowerShell 5.1.
 param([switch]$UntrustOnly)
 
@@ -13,7 +13,7 @@ if ($UntrustOnly) {
     exit 0
 }
 
-$pkg = Get-AppxPackage -Name "JatevoLabs.OyenzaStudio"
+$pkg = Get-AppxPackage -Name "JatevoLabs.AsyncIsland"
 if ($pkg) {
     "Removing the test copy ($($pkg.Version)) and its settings."
     Remove-AppxPackage -Package $pkg.PackageFullName
@@ -28,6 +28,6 @@ if ($thumb -and (Test-Path "Cert:\LocalMachine\TrustedPeople\$thumb")) {
 
 $usual = Join-Path $env:LOCALAPPDATA "Programs\Poni\poni.exe"
 if (Test-Path $usual) {
-    "Starting your usual Oyenza Studio."
+    "Starting your usual Async Island."
     Start-Process $usual
 }
